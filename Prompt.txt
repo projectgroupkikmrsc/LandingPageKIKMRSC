@@ -1,0 +1,53 @@
+Tolong bina satu fail Landing Page interaktif yang moden, responsif dan bertaraf eksekutif (fail tunggal: index.html dengan CSS & JS terbina dalam) untuk projek inovasi Kumpulan Inovatif dan Kreatif (KIK) Agensi Penguatkuasaan Maritim Malaysia (APMM).
+
+### 1. IDENTITI & TEMA VISUAL
+- Organisasi: Agensi Penguatkuasaan Maritim Malaysia (APMM), Kementerian Dalam Negeri
+- Kumpulan KIK: Kumpulan KIK Primer MRSC Kuantan — THE ALBATROS
+- Nama Projek: Maritime Search and Rescue (SAR) Management System
+- Warna Tema: Maritim Tentera Laut / Corporate Navy (#07192f, #0b2a4a, #0284c7, #38bdf8), aksen Emas/Kuning Ambar (#f59e0b, #d97706), kad bergaya "glassmorphism / frosted glass" dengan bayang lembut (soft drop-shadow).
+- Reka Bentuk: Sangat kemas, moden, mesra peranti mudah alih (responsive mobile-first & desktop), tipografi profesional (Inter / Plus Jakarta Sans / Arial), dan ada efek animasi hover yang lancar (smooth transition/lift effect).
+
+---
+
+### 2. STRUKTUR HALAMAN
+Halaman ini bertindak sebagai "One-Stop Command Portal / Link Hub" untuk panel juri KIK dan pelawat rasmi, mengandungi:
+
+1. **Header Rasmi**:
+   - Logo APMM & Lencana Kumpulan "THE ALBATROS"
+   - Tajuk Agensi: AGENSI PENGUATKUASAAN MARITIM MALAYSIA (KEMENTERIAN DALAM NEGERI)
+   - Tajuk Projek: MARITIME SEARCH AND RESCUE (SAR) MANAGEMENT SYSTEM
+   - Lencana Status: "LIVE PRODUCTION • TRL 9 SIAP GUNA" (hijau neon/teal bersinar)
+
+2. **5 BUTANG KAD UTAMA (INTERACTIVE ACTION CARDS)**:
+   Susun dalam bentuk grid responsif yang kemas (kad besar, ada ikon menarik, tajuk tebal, penerangan ringkas 1 baris, dan butang seruan tindakan "Akses Sekarang ➔"):
+
+   - **KAD 1: 📄 DOKUMEN BUKU LAPORAN KIK**
+     - Keterangan: Dokumentasi penuh 29 muka surat piawaian format KIK APMM 2026 (Ringkasan Eksekutif, Perincian Projek & Siri Lampiran).
+     - Pautan: Buka fail `Buku Laporan KIK.html` di tab baharu (`target="_blank"`).
+
+   - **KAD 2: 📊 SLAID PEMBENTANGAN (PRESENTATION)**
+     - Keterangan: Slaid persembahan rasmi Google Slides / Canva untuk sesi penilaian panel juri.
+     - Pautan: Sediakan pemboleh ubah pautan Google Slides (contoh: `https://docs.google.com/presentation/d/[SLIDE_ID]/present`) yang terus dibuka dalam mod pembentangan skrin penuh (Fullscreen Present Mode) di tab baharu.
+
+   - **KAD 3: 🎬 VIDEO MONTAJ & DEMONSTRASI SISTEM**
+     - Keterangan: Rakaman video montaj inovasi, pengujian operasi lapangan (SAREX), dan demonstrasi kefungsian dwi-sistem.
+     - Pautan / Interaksi: Sediakan sokongan link Google Drive / YouTube. Apabila ditekan, paparkan "Modal Popup Video Player" terus di atas portal tanpa perlu bawa pengguna keluar ke Google Drive (menggunakan embed iframe `/preview`), berserta butang tutup [X].
+
+   - **KAD 4: 🖥️ SMC COMMAND DASHBOARD (WEB LIVE)**
+     - Keterangan: Sistem kawalan bilik operasi Pusat Koordinasi Penyelamat Maritim (MRSC) berasaskan Leaflet GIS dan awan Supabase.
+     - Pautan: Buka URL `https://smc-sar-mmea-dashboard.pages.dev` terus di tab baharu (`target="_blank"`).
+
+   - **KAD 5: 📱 SRU MOBILE NAVIGATOR APPS (PWA LIVE)**
+     - Keterangan: Aplikasi navigasi taktikal luar talian (offline resilience) untuk bot/kapal operasi di laut.
+     - Pautan: Buka URL `https://sar-mobile.vercel.app` terus di tab baharu (`target="_blank"`).
+
+3. **Footer Rasmi**:
+   - Butiran Pasukan: Hak Cipta Terpelihara © 2026 Kumpulan KIK Primer MRSC Kuantan, Maritim Negeri Pahang.
+   - Pautan Pintas: Butang "Salin Pautan Portal" (Copy Link with toast notification) untuk memudahkan juri berkongsi URL.
+
+---
+
+### 3. KEPERLUAN TEKNIKAL
+- Pastikan semua fail CSS dan JavaScript disertakan dalam satu fail `index.html` sahaja (single standalone file).
+- Tiada sebarang library berat yang memerlukan npm install / build command.
+- Kod hendaklah bersih, berserta ulasan (comments) di bahagian URL supaya saya mudah menukar pautan Google Drive Video dan Google Slides nanti.

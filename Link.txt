@@ -1,0 +1,5 @@
+Dokumen: https://documentkik.vercel.app/Buku%20Laporan%20KIK.html
+Dashboard: https://smc-sar-mmea-dashboard.pages.dev/
+Mobile App: https://sar-mobile.vercel.app/
+Video: https://drive.google.com/file/d/19-GJGlizG-rbqJVQOiuPIp3GfxnELL9z/view?usp=sharing
+Slide: https://docs.google.com/presentation/d/1RNLP16NXLw2fwS90wXKfVCbUm66CraW1FiJ8gR_d8l0/edit?usp=sharing
