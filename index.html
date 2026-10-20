@@ -1340,7 +1340,7 @@
 
       <!-- Ruang Tayangan Video (Nisbah Aspek 16:9) -->
       <div class="video-viewport">
-        <iframe id="videoIframe" src="" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+        <iframe id="videoIframe" src="" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <div class="modal-footer">
@@ -1348,7 +1348,7 @@
         <div class="modal-footer-btn-group">
           <a id="btn-direct-drive" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-drive">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Buka di Google Drive</span>
+            <span>Buka di YouTube</span>
           </a>
           <button class="btn-secondary" onclick="closeVideoModal()">Tutup</button>
         </div>
@@ -1402,10 +1402,11 @@
       // Format Google Slides fullscreen: https://docs.google.com/presentation/d/[SLIDE_ID]/present
       slidesUrl: 'https://docs.google.com/presentation/d/1RNLP16NXLw2fwS90wXKfVCbUm66CraW1FiJ8gR_d8l0/present',
 
-      // 3. Rakaman Video Montaj & Pengujian SAREX (Google Drive Embed Preview & Link Terus)
-      // Untuk Google Drive, gunakan format /preview untuk paparan iframe modal:
-      videoEmbedUrl: 'https://drive.google.com/file/d/19-GJGlizG-rbqJVQOiuPIp3GfxnELL9z/preview',
-      videoDirectUrl: 'https://drive.google.com/file/d/19-GJGlizG-rbqJVQOiuPIp3GfxnELL9z/view?usp=sharing',
+      // 3. Rakaman Video Montaj & Pengujian SAREX (YouTube Embed HD & Link Terus)
+      // Format YouTube embed terbaik: /embed/[VIDEO_ID]?rel=0&modestbranding=1&vq=hd1080&autoplay=1
+      // VIDEO ID: hMNim1i6hgs
+      videoEmbedUrl: 'https://www.youtube.com/embed/hMNim1i6hgs?rel=0&modestbranding=1&vq=hd1080&autoplay=1&color=white',
+      videoDirectUrl: 'https://youtu.be/hMNim1i6hgs',
 
       // 4. SMC Command Dashboard Web Live (Pusat Kawalan Bilik Operasi MRSC Kuantan)
       dashboardUrl: 'https://smc-sar-mmea-dashboard.pages.dev/',
@@ -1561,3 +1562,4 @@
   </script>
 </body>
 </html>
+
