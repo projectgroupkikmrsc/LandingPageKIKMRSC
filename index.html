@@ -832,6 +832,195 @@
     }
 
     /* ==========================================================================
+       MODAL PILIHAN AKSES SRU MOBILE (APK & WEB)
+       ========================================================================== */
+    .mobile-select-modal {
+      max-width: 680px;
+    }
+
+    .mobile-select-body {
+      padding: 24px 24px 20px;
+    }
+
+    .mobile-select-intro {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+    }
+
+    .mobile-options-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-choice-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(11, 42, 74, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 14px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-choice-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .choice-apk {
+      border-color: rgba(52, 211, 153, 0.35);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(11, 42, 74, 0.85) 100%);
+    }
+
+    .choice-apk:hover {
+      border-color: var(--emerald-400);
+      box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+    }
+
+    .choice-web {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.15) 0%, rgba(11, 42, 74, 0.85) 100%);
+    }
+
+    .choice-web:hover {
+      border-color: var(--sky-400);
+      box-shadow: 0 12px 30px rgba(2, 132, 199, 0.3);
+    }
+
+    .choice-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(7, 25, 47, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .choice-apk .choice-icon-wrap {
+      color: var(--emerald-400);
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+
+    .choice-web .choice-icon-wrap {
+      color: var(--sky-400);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .choice-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .choice-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .choice-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+
+    .choice-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--emerald-400);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+
+    .badge-blue {
+      background: rgba(2, 132, 199, 0.2);
+      color: var(--sky-400);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    .choice-size {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .choice-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .choice-desc {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      line-height: 1.45;
+    }
+
+    .choice-action-arrow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--sky-400);
+      flex-shrink: 0;
+      padding-left: 6px;
+    }
+
+    .choice-apk .choice-action-arrow {
+      color: var(--emerald-400);
+    }
+
+    .mobile-select-tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(7, 25, 47, 0.6);
+      border: 1px dashed rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .mobile-select-tip svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--sky-400);
+    }
+
+    @media (max-width: 600px) {
+      .mobile-choice-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .choice-action-arrow {
+        align-self: flex-end;
+      }
+    }
+
+    /* ==========================================================================
        5. FOOTER RASMI & NOTIFIKASI TOAST
        ========================================================================== */
     .official-footer {
@@ -1269,7 +1458,7 @@
         <!-- --------------------------------------------------------------------
              KAD 5: 📱 SRU MOBILE NAVIGATOR APPS (PWA LIVE)
              -------------------------------------------------------------------- -->
-        <a id="card-mobile" href="https://sar-mobile.vercel.app" target="_blank" rel="noopener noreferrer" class="card-item card-dual-feature" data-theme="blue" role="listitem" aria-label="Akses SRU Mobile Navigator Apps PWA Live">
+        <div id="card-mobile" class="card-item card-dual-feature" data-theme="blue" role="listitem" onclick="openMobileModal(event)" aria-label="Akses SRU Mobile Navigator Apps (Pilihan APK atau Web)" tabindex="0" onkeydown="if(event.key==='Enter')openMobileModal(event)" style="cursor: pointer;">
           <div class="card-top">
             <div class="card-header-bar">
               <span class="card-badge" style="color: var(--sky-400); border-color: rgba(56, 189, 248, 0.4);">LIVE APLIKASI TAKTIKAL BOT</span>
@@ -1284,20 +1473,20 @@
                 </svg>
               </div>
             </div>
-            <h3 class="card-title">📱 SRU Mobile Navigator Apps (PWA Live)</h3>
+            <h3 class="card-title">📱 SRU Mobile Navigator Apps</h3>
             <p class="card-desc">Aplikasi navigasi taktikal luar talian (offline resilience) untuk bot/kapal operasi di laut.</p>
             <div class="card-specs-list">
-              <span class="spec-pill">Progressive Web App (PWA)</span>
+              <span class="spec-pill">Pilihan: APK Android &amp; Pelayar Web</span>
               <span class="spec-pill">Offline Resilience di Laut</span>
               <span class="spec-pill">Kompas GPS Taktikal</span>
               <span class="spec-pill">Aset SRU Bot &amp; Kapal</span>
             </div>
           </div>
           <div class="card-cta-btn">
-            <span>Akses Sekarang</span>
+            <span>Pilih Kaedah Akses (APK / Web)</span>
             <span class="cta-arrow">➔</span>
           </div>
-        </a>
+        </div>
 
       </div>
     </main>
@@ -1378,6 +1567,82 @@
   </div>
 
   <!-- ==========================================================================
+       MODAL 3: MODAL PILIHAN AKSES SRU MOBILE NAVIGATOR (APK & WEB)
+       ========================================================================== -->
+  <div id="mobileModal" class="modal-backdrop" onclick="handleMobileBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modalMobileTitle">
+    <div class="modal-window mobile-select-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" style="border-color: var(--sky-400); color: var(--sky-400);">AKSES TAKTIKAL BOT</span>
+          <h3 id="modalMobileTitle" class="modal-title">SRU Mobile Navigator Apps</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeMobileModal()" aria-label="Tutup Pilihan Akses">✕</button>
+      </div>
+
+      <div class="mobile-select-body">
+        <p class="mobile-select-intro">Sila pilih kaedah penggunaan mengikut peranti dan keperluan operasi anda:</p>
+
+        <div class="mobile-options-container">
+          <!-- Pilihan 1: Download APK Android -->
+          <a id="btn-download-apk" href="MSAR_SRU_NAV.apk" download="MSAR_SRU_NAV.apk" class="mobile-choice-card choice-apk" onclick="handleApkDownload()">
+            <div class="choice-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <div class="choice-content">
+              <div class="choice-badge-row">
+                <span class="choice-badge badge-green">DISYORKAN UNTUK BOT / KAPAL</span>
+                <span class="choice-size">5.15 MB • Fail APK Android</span>
+              </div>
+              <h4 class="choice-title">Download APK (Android)</h4>
+              <p class="choice-desc">Muat turun dan pasang terus pada telefon pintar atau tablet Android. Direka khas untuk berfungsi 100% luar talian (tanpa internet) semasa operasi di laut.</p>
+            </div>
+            <div class="choice-action-arrow">
+              <span>Muat Turun</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Pilihan 2: Buka di Pelayar Web (Browser) -->
+          <a id="btn-open-web" href="https://sar-mobile.vercel.app" target="_blank" rel="noopener noreferrer" class="mobile-choice-card choice-web" onclick="closeMobileModal()">
+            <div class="choice-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+              </svg>
+            </div>
+            <div class="choice-content">
+              <div class="choice-badge-row">
+                <span class="choice-badge badge-blue">ONLINE CLOUD PWA</span>
+                <span class="choice-size">Semua Pelayar (iOS / Android / PC)</span>
+              </div>
+              <h4 class="choice-title">Buka di Pelayar Web (Browser)</h4>
+              <p class="choice-desc">Akses versi web secara terus di pelayar (Chrome / Safari / Edge) melalui sar-mobile.vercel.app tanpa perlu memuat turun atau memasang sebarang fail.</p>
+            </div>
+            <div class="choice-action-arrow">
+              <span>Buka Sekarang</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="mobile-select-tip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Pemberitahuan Android: Sekiranya muat turun atau pemasangan disekat, sila klik <em>"Tetapan"</em> dan aktifkan <em>"Benarkan pemasangan dari sumber ini" (Install unknown apps)</em>.</span>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="btn-secondary" onclick="closeMobileModal()">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        NOTIFIKASI TOAST (FLOATING FEEDBACK NOTIFICATION)
        ========================================================================== -->
   <div id="toastNotification" class="toast-notification" role="status" aria-live="polite">
@@ -1412,7 +1677,8 @@
       dashboardUrl: 'https://smc-sar-mmea-dashboard.pages.dev/',
 
       // 5. SRU Mobile Navigator Apps PWA Live (Aplikasi Taktikal Bot & Kapal Luar Talian)
-      mobileAppUrl: 'https://sar-mobile.vercel.app/'
+      mobileAppUrl: 'https://sar-mobile.vercel.app/',
+      apkDownloadUrl: 'MSAR_SRU_NAV.apk'
     };
 
     // Pasang URL konfigurasi pada elemen DOM semasa dokumen dimuatkan
@@ -1495,6 +1761,7 @@
     function handleQrBackdropClick(e) {
       if (e.target === qrModal) {
         closeQrModal();
+        closeMobileModal();
       }
     }
 
@@ -1503,8 +1770,40 @@
       if (e.key === 'Escape') {
         closeVideoModal();
         closeQrModal();
+        closeMobileModal();
       }
     });
+
+    /* ==========================================================================
+       FUNGSI 3: KAWALAN MODAL PILIHAN AKSES SRU MOBILE (APK & WEB)
+       ========================================================================== */
+    const mobileModal = document.getElementById('mobileModal');
+
+    function openMobileModal(e) {
+      if (e) e.preventDefault();
+      if (!mobileModal) return;
+      mobileModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileModal() {
+      if (!mobileModal) return;
+      mobileModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleMobileBackdropClick(e) {
+      if (e.target === mobileModal) {
+        closeMobileModal();
+      }
+    }
+
+    function handleApkDownload() {
+      showToast('Memulakan muat turun APK (MSAR_SRU_NAV.apk)...');
+      setTimeout(() => {
+        closeMobileModal();
+      }, 1200);
+    }
 
     /* ==========================================================================
        FUNGSI 3: SALIN PAUTAN PORTAL KE PAPAN KERATAN (TOAST NOTIFICATION)
