@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172c" />
+      <stop offset="50%" stop-color="#0b2a4a" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Lencana Luar (Shield) -->
+  <path d="M 100 12 C 145 12, 185 24, 185 58 C 185 122, 145 168, 100 188 C 55 168, 15 122, 15 58 C 15 24, 55 12, 100 12 Z" fill="url(#shieldGrad)" stroke="url(#goldBorder)" stroke-width="5" />
+  <path d="M 100 18 C 140 18, 178 28, 178 60 C 178 118, 140 162, 100 180 C 60 162, 22 118, 22 60 C 22 28, 60 18, 100 18 Z" fill="none" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5" />
+
+  <!-- Gelombang Radar Digital SAR -->
+  <circle cx="100" cy="98" r="62" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="100" cy="98" r="44" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.5" />
+  <circle cx="100" cy="98" r="24" fill="none" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.5" />
+  <!-- Crosshair -->
+  <line x1="100" y1="36" x2="100" y2="160" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2" />
+  <line x1="38" y1="98" x2="162" y2="98" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2" />
+
+  <!-- Nod Rangkaian AI -->
+  <circle cx="70" cy="68" r="3.5" fill="#38bdf8" />
+  <circle cx="130" cy="68" r="3.5" fill="#38bdf8" />
+  <circle cx="62" cy="120" r="3" fill="#38bdf8" />
+  <circle cx="138" cy="120" r="3" fill="#38bdf8" />
+  <line x1="70" y1="68" x2="100" y2="82" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1" />
+  <line x1="130" y1="68" x2="100" y2="82" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1" />
+
+  <!-- Ombak Maritim -->
+  <path d="M 40 142 Q 70 128, 100 142 T 160 142" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" />
+  <path d="M 50 152 Q 75 140, 100 152 T 150 152" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Sayap Albatros -->
+  <path d="M 100 85 C 80 62, 45 66, 26 86 C 45 92, 70 94, 88 102 C 94 98, 98 90, 100 85 Z" fill="url(#wingGrad)" stroke="#0b2a4a" stroke-width="1.2" />
+  <path d="M 100 85 C 120 62, 155 66, 174 86 C 155 92, 130 94, 112 102 C 106 98, 102 90, 100 85 Z" fill="url(#wingGrad)" stroke="#0b2a4a" stroke-width="1.2" />
+  <!-- Paruh & Beacon -->
+  <polygon points="100,74 96,87 104,87" fill="#ffffff" />
+  <polygon points="100,74 98,82 102,82" fill="#f59e0b" />
+  <circle cx="100" cy="98" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5" />
+
+  <!-- Banner THE ALBATROS -->
+  <path d="M 24 165 L 176 165 L 164 184 L 36 184 Z" fill="#07172c" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="100" y="179" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="900" text-anchor="middle" letter-spacing="1.2">THE ALBATROS</text>
+</svg>
+
